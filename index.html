@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Adrian Morawdi | Interdisciplinary Literary Researcher</title>
+  <meta name="description" content="Official academic website of Adrian Morawdi (Alireza Moradi), interdisciplinary literary researcher, literature instructor, and content creator focused on quantum approaches to literature, literary theory, postmodernism, and poetics." />
+  <meta name="keywords" content="Adrian Morawdi, Alireza Moradi, literary researcher, literary theory, interdisciplinary literature, postmodernism, poetics, aesthetics, literature instructor, independent researcher" />
+  <meta name="author" content="Adrian Morawdi" />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="W3z2ih1y2HvHipxhl08vvvcHjbsTGTH4_8v2t9OHCJQ" />
+
+  <link rel="canonical" href="https://adrianmorawdi.github.io/adrianmorawdi/" />
+  <link rel="icon" href="profile.JPG" type="image/jpeg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Adrian Morawdi | Interdisciplinary Literary Researcher" />
+  <meta property="og:description" content="Official academic website of Adrian Morawdi, independent literary researcher, literature instructor, and interdisciplinary thinker." />
+  <meta property="og:url" content="https://adrianmorawdi.github.io/adrianmorawdi/" />
+  <meta property="og:site_name" content="Adrian Morawdi" />
+  <meta property="og:image" content="https://adrianmorawdi.github.io/adrianmorawdi/profile.JPG" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Adrian Morawdi | Interdisciplinary Literary Researcher" />
+  <meta name="twitter:description" content="Official academic website of Adrian Morawdi, literature instructor, researcher, and content creator." />
+  <meta name="twitter:image" content="https://adrianmorawdi.github.io/adrianmorawdi/profile.JPG" />
+
+  <style>
+    :root {
+      --oxford: #0f1b2d;
+      --oxford-soft: #16263c;
+      --ink: #1f2937;
+      --muted: #5f6b7a;
+      --line: #d9dee7;
+      --paper: #f7f5f1;
+      --card: #ffffff;
+      --gold: #b08d57;
+      --gold-soft: #d4b483;
+      --shadow: 0 20px 45px rgba(15, 27, 45, 0.10);
+      --radius: 18px;
+      --sidebar-width: 300px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(176, 141, 87, 0.08), transparent 28%),
+        linear-gradient(135deg, #f8f6f2 0%, #f3efe8 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--oxford);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: var(--sidebar-width);
+      background: linear-gradient(180deg, #0d1726 0%, #13233a 100%);
+      color: #f4efe6;
+      padding: 34px 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 8px 0 30px rgba(0,0,0,0.08);
+      overflow-y: auto;
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(212, 180, 131, 0.22);
+    }
+
+    .brand img {
+      width: 118px;
+      height: 118px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(212, 180, 131, 0.7);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+      margin-bottom: 16px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 1.55rem;
+      color: #ffffff;
+      letter-spacing: 0.4px;
+    }
+
+    .brand p {
+      margin: 8px 0 0;
+      color: #d9c7aa;
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .nav button {
+      width: 100%;
+      text-align: left;
+      background: rgba(255,255,255,0.03);
+      color: #f7f1e8;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-left: 3px solid transparent;
+      padding: 14px 14px;
+      border-radius: 12px;
+      font-size: 0.96rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.28s ease;
+    }
+
+    .nav button:hover {
+      background: rgba(255,255,255,0.08);
+      border-left-color: var(--gold-soft);
+      transform: translateX(4px);
+    }
+
+    .nav button.active {
+      background: linear-gradient(90deg, rgba(176, 141, 87, 0.18), rgba(255,255,255,0.04));
+      border-color: rgba(212, 180, 131, 0.25);
+      border-left-color: var(--gold-soft);
+      color: #fff;
+      box-shadow: inset 0 0 0 1px rgba(212, 180, 131, 0.08);
+    }
+
+    .content {
+      flex: 1;
+      padding: 42px;
+      max-width: 1200px;
+    }
+
+    .hero {
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(176, 141, 87, 0.16);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+      margin-bottom: 28px;
+    }
+
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      color: var(--oxford);
+      letter-spacing: 0.2px;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.8;
+      max-width: 900px;
+    }
+
+    .panel {
+      display: none;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
+    .panel.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-card {
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(176, 141, 87, 0.16);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+
+    .section-card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.45rem;
+      color: var(--oxford);
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .section-card h3::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 70px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .section-card p,
+    .section-card li {
+      color: #374151;
+      line-height: 1.9;
+      font-size: 1rem;
+    }
+
+    .section-card ul {
+      padding-left: 20px;
+      margin: 12px 0 0;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .feature-image {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(176, 141, 87, 0.20);
+      box-shadow: 0 14px 30px rgba(15, 27, 45, 0.12);
+      display: block;
+      object-fit: cover;
+      background: #ece7de;
+    }
+
+    .image-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .meta-list strong {
+      color: var(--oxford);
+    }
+
+    .link-list a {
+      display: inline-block;
+      margin: 6px 14px 6px 0;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: rgba(15, 27, 45, 0.05);
+      border: 1px solid rgba(15, 27, 45, 0.08);
+      transition: all 0.25s ease;
+    }
+
+    .link-list a:hover {
+      background: rgba(176, 141, 87, 0.10);
+      border-color: rgba(176, 141, 87, 0.28);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 32px;
+      padding: 8px 0 18px;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .content {
+        padding: 22px;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand h1 {
+        font-size: 1.35rem;
+      }
+
+      .hero {
+        padding: 24px;
+      }
+
+      .hero h2 {
+        font-size: 1.55rem;
+      }
+
+      .section-card {
+        padding: 22px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adrian Morawdi",
+    "alternateName": "Alireza Moradi",
+    "url": "https://adrianmorawdi.github.io/adrianmorawdi/",
+    "image": "https://adrianmorawdi.github.io/adrianmorawdi/profile.JPG",
+    "jobTitle": [
+      "Interdisciplinary Literary Researcher",
+      "Literature Instructor",
+      "Independent Researcher",
+      "Content Creator"
+    ],
+    "description": "Official academic website of Adrian Morawdi (Alireza Moradi), an interdisciplinary literary researcher focused on literary theory, quantum approaches to literature, postmodernism, poetics, and aesthetics.",
+    "email": [
+      "mailto:al.moradi@mail.um.ac.ir",
+      "mailto:adriennmoraw@gmail.com"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Ferdowsi University of Mashhad",
+      "sameAs": "https://en.um.ac.ir/"
+    },
+    "sameAs": [
+      "https://orcid.org/0009-0004-3554-5704",
+      "https://scholar.google.com/citations?hl=en&user=3YQnB4IAAAAJ",
+      "https://www.researchgate.net/profile/Adrian-Morawdi",
+      "https://independent.academia.edu/AdrianMorawdi",
+      "https://www.youtube.com/@AdrianMorawdi",
+      "https://www.instagram.com/adrianmorawdi",
+      "https://t.me/Adrianmorawdi",
+      "https://medium.com/@adriennmoraw",
+      "https://substack.com/@adrianmorawdi"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="profile.JPG" alt="Adrian Morawdi profile photo" />
+        <h1>Adrian Morawdi</h1>
+        <p>Interdisciplinary Literary Researcher</p>
+      </div>
+
+      <nav class="nav" aria-label="Section navigation">
+        <button class="tab-btn active" data-target="about">Profile / About</button>
+        <button class="tab-btn" data-target="education">Education</button>
+        <button class="tab-btn" data-target="research">Research Interests</button>
+        <button class="tab-btn" data-target="publications">Publications</button>
+        <button class="tab-btn" data-target="activities">Academic Activities</button>
+        <button class="tab-btn" data-target="teaching">Teaching / Instruction</button>
+        <button class="tab-btn" data-target="media">Media and Social</button>
+        <button class="tab-btn" data-target="contact">Contact Info</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="hero">
+        <h2>Academic Website</h2>
+        <p>
+          Welcome to the official website of Adrian Morawdi — an interdisciplinary literary researcher,
+          literature instructor, and independent academic voice whose work explores the intersections
+          of literary theory, poetics, aesthetics, postmodernism, and quantum approaches to literature.
+        </p>
+      </section>
+
+      <section id="about" class="panel active show">
+        <div class="section-card section-grid">
+          <div>
+            <h3>Profile / About</h3>
+            <p class="meta-list">
+              <strong>Full Name:</strong> Alireza Moradi<br />
+              <strong>Pen Name:</strong> Adrian Morawdi<br />
+              <strong>Title / Role:</strong> Literature Instructor, Independent Researcher, Content Creator<br />
+              <strong>Research Focus:</strong> Quantum Approaches to Literature, Interdisciplinary Literary Theory
+            </p>
+
+            <p>
+              Adrian Morawdi is the pen name of Alireza Moradi, an emerging interdisciplinary literary
+              researcher and literature instructor based in Iran. His academic work centers on innovative
+              approaches to literary interpretation, particularly where literary theory intersects with
+              broader epistemological and interdisciplinary questions. His intellectual interests include
+              comparative literary studies, postmodernism, poetics, aesthetics, and original theoretical
+              inquiry into the relationship between literature and nontraditional conceptual frameworks.
+            </p>
+
+            <p>
+              Alongside research and teaching, he actively contributes to literary culture through
+              educational content creation, poetry performance, reading circles, and academic discussion sessions.
+            </p>
+          </div>
+
+          <div class="image-stack">
+            <img class="feature-image" src="bio.JPG" alt="Biography image" />
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="panel">
+        <div class="section-card section-grid">
+          <div>
+            <h3>Education</h3>
+            <p>
+              <strong>Bachelor of Arts in English Language and Literature</strong><br />
+              Faculty of Humanities and Letters<br />
+              Ferdowsi University of Mashhad (FUM)<br />
+              October 2023 – Present
+            </p>
+
+            <p>
+              Current undergraduate studies are focused on literary criticism, English and comparative literature,
+              theoretical humanities, and the foundations of interdisciplinary literary inquiry.
+            </p>
+          </div>
+
+          <div class="image-stack">
+            <img class="feature-image" src="faculty.JPG" alt="Faculty image" />
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="panel">
+        <div class="section-card">
+          <h3>Research Interests</h3>
+          <ul>
+            <li>Interdisciplinary Literary Theory</li>
+            <li>Comparative Literary Studies</li>
+            <li>Postmodernism</li>
+            <li>Poetics and Aesthetics</li>
+            <li>Quantum Approaches to Literature</li>
+            <li>Innovative Models of Literary Interpretation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="publications" class="panel">
+        <div class="section-card">
+          <h3>Publications</h3>
+          <ul>
+            <li>
+              <strong>Essay (Self-published, 2025):</strong>
+              <em>Quantum Thinking and Literary Meaning</em> —
+              <a href="https://www.researchgate.net/publication/391722163_Quantum_Thinking_and_Literary_Meaning_A_New_Approach_to_Interdisciplinary_Literary_Theory" target="_blank" rel="noopener noreferrer">View on ResearchGate</a>
+            </li>
+            <li>
+              <strong>Poetry:</strong> Poetry video performances and spoken literary expression.
+            </li>
+            <li>
+              <strong>Educational & Literary Video Content:</strong> Public-facing content on literary thought, interpretation, and theory.
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <div class="image-stack">
+            <img class="feature-image" src="poetry content.JPG" alt="Poetry content image" />
+            <img class="feature-image" src="poetry content 2.JPG" alt="Poetry content second image" />
+            <img class="feature-image" src="content 3.JPG" alt="Educational content image" />
+          </div>
+        </div>
+      </section>
+
+      <section id="activities" class="panel">
+        <div class="section-card">
+          <h3>Academic Activities</h3>
+          <ul>
+            <li>Organizer and host of literary discussion sessions and reading circles</li>
+            <li>Independent literature instruction and theoretical workshops</li>
+            <li>Educational content creation in literary theory and interpretation</li>
+            <li>International academic Q&amp;A support for literature and humanities learners</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <img class="feature-image" src="discussion.JPG" alt="Discussion session image" />
+        </div>
+      </section>
+
+      <section id="teaching" class="panel">
+        <div class="section-card">
+          <h3>Teaching / Instruction</h3>
+          <ul>
+            <li>Literature discussion and guided reading sessions</li>
+            <li>Innovative approaches to literary interpretation</li>
+            <li>English language teaching for adults (B1–C2)</li>
+            <li>Independent educational support in literary studies</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <div class="image-stack">
+            <img class="feature-image" src="lit instruction 2.JPG" alt="Literature instruction image" />
+            <img class="feature-image" src="lit instruction.PNG" alt="Literature teaching image" />
+            <img class="feature-image" src="content 4.JPG" alt="Educational content creation image" />
+          </div>
+        </div>
+      </section>
+
+      <section id="media" class="panel">
+        <div class="section-card">
+          <h3>Media and Social</h3>
+
+          <p><strong>Academic Profiles</strong></p>
+          <div class="link-list">
+            <a href="https://orcid.org/0009-0004-3554-5704" target="_blank" rel="noopener noreferrer">ORCID</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=3YQnB4IAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a href="https://www.researchgate.net/profile/Adrian-Morawdi" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+            <a href="https://independent.academia.edu/AdrianMorawdi" target="_blank" rel="noopener noreferrer">Academia.edu</a>
+          </div>
+
+          <p><strong>Media / Social</strong></p>
+          <div class="link-list">
+            <a href="https://www.youtube.com/@AdrianMorawdi" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.instagram.com/adrianmorawdi" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://t.me/Adrianmorawdi" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://medium.com/@adriennmoraw" target="_blank" rel="noopener noreferrer">Medium</a>
+            <a href="https://substack.com/@adrianmorawdi" target="_blank" rel="noopener noreferrer">Substack</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="panel">
+        <div class="section-card">
+          <h3>Contact Info</h3>
+          <p>
+            <strong>Academic Email:</strong>
+            <a href="mailto:al.moradi@mail.um.ac.ir">al.moradi@mail.um.ac.ir</a>
+          </p>
+          <p>
+            <strong>Personal Email:</strong>
+            <a href="mailto:adriennmoraw@gmail.com">adriennmoraw@gmail.com</a>
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        © 2026 Adrian Morawdi. All rights reserved.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.panel');
+
+    function showPanel(targetId) {
+      panels.forEach(panel => {
+        panel.classList.remove('show');
+        panel.classList.remove('active');
+      });
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      const targetPanel = document.getElementById(targetId);
+      const targetButton = document.querySelector(`[data-target="${targetId}"]`);
+
+      if (targetPanel && targetButton) {
+        targetPanel.classList.add('active');
+        requestAnimationFrame(() => {
+          targetPanel.classList.add('show');
+        });
+        targetButton.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        showPanel(button.dataset.target);
+      });
+    });
+  </script>
+</body>
+</html>
