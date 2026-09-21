@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Adrian Morawdi | Interdisciplinary Literary Researcher</title>
-  <meta name="description" content="Official academic website of Adrian Morawdi (Alireza Moradi), interdisciplinary literary researcher, literature instructor, and content creator focused on quantum approaches to literature, literary theory, postmodernism, and poetics." />
-  <meta name="keywords" content="Adrian Morawdi, Alireza Moradi, literary researcher, literary theory, interdisciplinary literature, postmodernism, poetics, aesthetics, literature instructor, independent researcher" />
+  <meta name="description" content="Official academic website of Adrian Morawdi (Alireza Moradi / علیرضا مرادی / آدرین مرادی), Literary Scholar | Author | Educator." />
+  <meta name="keywords" content="Adrian Morawdi, Alireza Moradi, علیرضا مرادی, آدرین مرادی, literary researcher, literary theory, quantum literature, postmodernism, poetics, پژوهشگر ادبیات، نویسنده و مدرس" />
   <meta name="author" content="Adrian Morawdi" />
   <meta name="robots" content="index, follow" />
-<meta name="google-site-verification" content="W3z2ih1y2HvHipxhl08vvvcHjbsTGTH4_8v2t9OHCJQ" />
+  <meta name="google-site-verification" content="W3z2ih1y2HvHipxhl08vvvcHjbsTGTH4_8v2t9OHCJQ" />
   <link rel="canonical" href="https://adrianmorawdi.github.io/" />
   <link rel="icon" href="profile.jpg" type="image/jpeg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Adrian Morawdi | Interdisciplinary Literary Researcher" />
-  <meta property="og:description" content="Official academic website of Adrian Morawdi, independent literary researcher, literature instructor, and interdisciplinary thinker." />
+  <meta property="og:description" content="Official academic website of Adrian Morawdi (علیرضا مرادی), Literary Scholar | Author | Educator." />
   <meta property="og:url" content="https://adrianmorawdi.github.io/" />
-<meta property="og:image" content="https://adrianmorawdi.github.io/profile.jpg" />
-<meta name="twitter:image" content="https://adrianmorawdi.github.io/profile.jpg" />
-
+  <meta property="og:image" content="https://adrianmorawdi.github.io/profile.jpg" />
+  <meta name="twitter:image" content="https://adrianmorawdi.github.io/profile.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Adrian Morawdi | Interdisciplinary Literary Researcher" />
-  <meta name="twitter:description" content="Official academic website of Adrian Morawdi, literature instructor, researcher, and content creator." />
-  <meta name="twitter:image" content="https://adrianmorawdi.github.io/adrianmorawdi/profile.jpg" />
+  <meta name="twitter:description" content="Official academic website of Adrian Morawdi, Literary Scholar | Author | Educator." />
 
   <style>
     :root {
@@ -54,12 +52,16 @@
 
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Georgia, "Times New Roman", Tahoma, serif;
       color: var(--ink);
       background:
         radial-gradient(circle at top left, rgba(176, 141, 87, 0.08), transparent 28%),
         linear-gradient(135deg, #f8f6f2 0%, #f3efe8 100%);
       min-height: 100vh;
+    }
+
+    body[dir="rtl"] {
+      font-family: "Vazirmatn", Tahoma, "Segoe UI", sans-serif;
     }
 
     a {
@@ -87,6 +89,45 @@
       border-right: 1px solid rgba(255,255,255,0.08);
       box-shadow: 8px 0 30px rgba(0,0,0,0.08);
       overflow-y: auto;
+    }
+
+    body[dir="rtl"] .sidebar {
+      border-right: none;
+      border-left: 1px solid rgba(255,255,255,0.08);
+      box-shadow: -8px 0 30px rgba(0,0,0,0.08);
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(212, 180, 131, 0.3);
+      color: #d9c7aa;
+      padding: 5px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+
+    .lang-btn:hover {
+      background: rgba(212, 180, 131, 0.2);
+      color: #fff;
+    }
+
+    .lang-btn.active {
+      background: var(--gold);
+      color: #0d1726;
+      border-color: var(--gold-soft);
     }
 
     .brand {
@@ -143,10 +184,22 @@
       transition: all 0.28s ease;
     }
 
+    body[dir="rtl"] .nav button {
+      text-align: right;
+      border-left: 1px solid rgba(255,255,255,0.08);
+      border-right: 3px solid transparent;
+    }
+
     .nav button:hover {
       background: rgba(255,255,255,0.08);
       border-left-color: var(--gold-soft);
       transform: translateX(4px);
+    }
+
+    body[dir="rtl"] .nav button:hover {
+      border-left-color: rgba(255,255,255,0.08);
+      border-right-color: var(--gold-soft);
+      transform: translateX(-4px);
     }
 
     .nav button.active {
@@ -155,6 +208,12 @@
       border-left-color: var(--gold-soft);
       color: #fff;
       box-shadow: inset 0 0 0 1px rgba(212, 180, 131, 0.08);
+    }
+
+    body[dir="rtl"] .nav button.active {
+      background: linear-gradient(-90deg, rgba(176, 141, 87, 0.18), rgba(255,255,255,0.04));
+      border-left-color: rgba(212, 180, 131, 0.25);
+      border-right-color: var(--gold-soft);
     }
 
     .content {
@@ -234,6 +293,12 @@
       background: linear-gradient(90deg, var(--gold), transparent);
     }
 
+    body[dir="rtl"] .section-card h3::after {
+      left: auto;
+      right: 0;
+      background: linear-gradient(-90deg, var(--gold), transparent);
+    }
+
     .section-card p,
     .section-card li {
       color: #374151;
@@ -244,6 +309,11 @@
     .section-card ul {
       padding-left: 20px;
       margin: 12px 0 0;
+    }
+
+    body[dir="rtl"] .section-card ul {
+      padding-left: 0;
+      padding-right: 20px;
     }
 
     .section-grid {
@@ -282,6 +352,10 @@
       transition: all 0.25s ease;
     }
 
+    body[dir="rtl"] .link-list a {
+      margin: 6px 0 6px 14px;
+    }
+
     .link-list a:hover {
       background: rgba(176, 141, 87, 0.10);
       border-color: rgba(176, 141, 87, 0.28);
@@ -315,94 +389,30 @@
       .section-grid {
         grid-template-columns: 1fr;
       }
-
-      .hero {
-        padding: 16px 18px;
-        margin-bottom: 14px;
-      }
-
-      .hero h2 {
-        font-size: 1.3rem;
-      }
-
-      .hero p {
-        font-size: 0.94rem;
-        line-height: 1.65;
-      }
-
-      .nav {
-        gap: 7px;
-      }
-
-      .nav button {
-        padding: 11px 11px;
-        font-size: 0.92rem;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .brand {
-        margin-bottom: 14px;
-        padding-bottom: 12px;
-      }
-
-      .brand img {
-        width: 76px;
-        height: 76px;
-        margin-bottom: 10px;
-      }
-
-      .brand h1 {
-        font-size: 1.2rem;
-      }
-
-      .brand p {
-        font-size: 0.84rem;
-      }
-
-      .content {
-        padding: 14px;
-      }
-
-      .hero {
-        padding: 14px 16px;
-      }
-
-      .hero h2 {
-        font-size: 1.18rem;
-        margin-bottom: 6px;
-      }
-
-      .hero p {
-        font-size: 0.9rem;
-        line-height: 1.6;
-      }
-
-      .section-card {
-        padding: 20px;
-      }
-
-      .section-card h3 {
-        font-size: 1.25rem;
-      }
     }
   </style>
 
+  <!-- Multi-Language Schema.org for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Adrian Morawdi",
-    "alternateName": "Alireza Moradi",
+    "alternateName": [
+      "Alireza Moradi",
+      "علیرضا مرادی",
+      "آدرین مرادی"
+    ],
     "url": "https://adrianmorawdi.github.io/",
-"image": "https://adrianmorawdi.github.io/profile.jpg",
+    "image": "https://adrianmorawdi.github.io/profile.jpg",
     "jobTitle": [
       "Interdisciplinary Literary Researcher",
       "Literature Instructor",
       "Independent Researcher",
+      "Author",
       "Content Creator"
     ],
-    "description": "Official academic website of Adrian Morawdi (Alireza Moradi), an interdisciplinary literary researcher focused on literary theory, quantum approaches to literature, postmodernism, poetics, and aesthetics.",
+    "description": "Official academic website of Adrian Morawdi (Alireza Moradi / علیرضا مرادی), Literary Scholar | Author | Educator focused on quantum approaches to literature, literary theory, postmodernism, and poetics.",
     "email": [
       "mailto:al.moradi@mail.um.ac.ir",
       "mailto:adriennmoraw@gmail.com"
@@ -412,16 +422,21 @@
       "name": "Ferdowsi University of Mashhad",
       "sameAs": "https://en.um.ac.ir/"
     },
-    "sameAs": [
-      "https://orcid.org/0009-0004-3554-5704",
-      "https://scholar.google.com/citations?hl=en&user=3YQnB4IAAAAJ",
-      "https://www.researchgate.net/profile/Adrian-Morawdi",
-      "https://independent.academia.edu/AdrianMorawdi",
-      "https://www.youtube.com/@AdrianMorawdi",
-      "https://www.instagram.com/adrianmorawdi",
-      "https://t.me/Adrianmorawdi",
-      "https://medium.com/@adriennmoraw",
-      "https://substack.com/@adrianmorawdi"
+"sameAs": [
+  "https://doi.org/10.5281/zenodo.22766183",
+  "https://doi.org/10.5281/zenodo.22863013",
+  "https://cv.hal.science/adrian-morawdi",
+  "https://orcid.org/0009-0004-3554-5704",
+  "https://scholar.google.com/citations?hl=en&user=3YQnB4IAAAAJ",
+  "https://www.researchgate.net/profile/Adrian-Morawdi",
+  "https://independent.academia.edu/AdrianMorawdi",
+  "https://www.imdb.com/name/nm18466709/",
+  "https://x.com/Adrian_Morawdi",
+  "https://medium.com/@adriennmoraw",
+  "https://substack.com/@adrianmorawdi",
+  "https://www.youtube.com/@AdrianMorawdi",
+  "https://www.instagram.com/adrianmorawdi",
+  "https://t.me/Adrianmorawdi"
     ]
   }
   </script>
@@ -429,154 +444,126 @@
 <body>
   <div class="layout">
     <aside class="sidebar">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fa">فارسی</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+
       <div class="brand">
         <img src="profile.jpg" alt="Adrian Morawdi profile photo" />
-        <h1>Adrian Morawdi</h1>
-        <p>Interdisciplinary Literary Researcher</p>
+        <h1 data-i18n="brand_name">Adrian Morawdi</h1>
+        <p data-i18n="brand_title">Interdisciplinary Literary Researcher</p>
       </div>
 
       <nav class="nav" aria-label="Section navigation">
-        <button class="tab-btn active" data-target="about">Profile / About</button>
-        <button class="tab-btn" data-target="education">Education</button>
-        <button class="tab-btn" data-target="research">Research Interests</button>
-        <button class="tab-btn" data-target="publications">Publications</button>
-        <button class="tab-btn" data-target="activities">Academic Activities</button>
-        <button class="tab-btn" data-target="teaching">Teaching / Instruction</button>
-        <button class="tab-btn" data-target="media">Media and Social</button>
-        <button class="tab-btn" data-target="contact">Contact Info</button>
+        <button class="tab-btn active" data-target="about" data-i18n="nav_about">Profile / About</button>
+        <button class="tab-btn" data-target="education" data-i18n="nav_education">Education</button>
+        <button class="tab-btn" data-target="research" data-i18n="nav_research">Research Interests</button>
+        <button class="tab-btn" data-target="publications" data-i18n="nav_publications">Publications</button>
+        <button class="tab-btn" data-target="activities" data-i18n="nav_activities">Academic Activities</button>
+        <button class="tab-btn" data-target="teaching" data-i18n="nav_teaching">Teaching / Instruction</button>
+        <button class="tab-btn" data-target="media" data-i18n="nav_media">Media and Social</button>
+        <button class="tab-btn" data-target="contact" data-i18n="nav_contact">Contact Info</button>
       </nav>
     </aside>
 
     <main class="content">
       <section class="hero">
-        <h2>Academic Website</h2>
-        <p>
+        <h2 data-i18n="hero_title">Academic Website</h2>
+        <p data-i18n="hero_desc">
           Welcome to the official website of Adrian Morawdi.
         </p>
       </section>
 
+      <!-- Profile / About -->
       <section id="about" class="panel active show">
         <div class="section-card section-grid">
           <div>
-            <h3>Profile / About</h3>
-            <p class="meta-list">
-              <strong>Full Name:</strong> Alireza Moradi<br />
-              <strong>Pen Name:</strong> Adrian Morawdi<br />
-              <strong>Title / Role:</strong> Literature Instructor, Independent Researcher, Content Creator<br />
-              <strong>Research Focus:</strong> Quantum Approaches to Literature, Interdisciplinary Literary Theory
-            </p>
-
-            <p>
-              Adrian Morawdi is the pen name of Alireza Moradi, an emerging interdisciplinary literary
-              researcher and literature instructor based in Iran. His academic work centers on innovative
-              approaches to literary interpretation, particularly where literary theory intersects with
-              broader epistemological and interdisciplinary questions. His intellectual interests include
-              comparative literary studies, postmodernism, poetics, aesthetics, and original theoretical
-              inquiry into the relationship between literature and nontraditional conceptual frameworks.
-            </p>
-
-            <p>
-              Alongside research and teaching, he actively contributes to literary culture through
-              educational content creation, poetry performance, reading circles, and academic discussion sessions.
-            </p>
+            <h3 data-i18n="about_heading">Profile / About</h3>
+            <div id="about_content">
+              <!-- Content rendered via JS based on selected language -->
+            </div>
           </div>
-
           <div class="image-stack">
             <img class="feature-image" src="bio.jpg" alt="Biography image" />
           </div>
         </div>
       </section>
 
+      <!-- Education -->
       <section id="education" class="panel">
         <div class="section-card section-grid">
           <div>
-            <h3>Education</h3>
-            <p>
-              <strong>Bachelor of Arts in English Language and Literature</strong><br />
-              Faculty of Humanities and Letters<br />
-              Ferdowsi University of Mashhad (FUM)<br />
-              October 2023 – Present
-            </p>
-
-            <p>
-              Current undergraduate studies are focused on literary criticism, English and comparative literature,
-              theoretical humanities, and the foundations of interdisciplinary literary inquiry.
-            </p>
+            <h3 data-i18n="edu_heading">Education</h3>
+            <div id="education_content">
+              <!-- Content rendered via JS -->
+            </div>
           </div>
-
           <div class="image-stack">
             <img class="feature-image" src="faculty.jpg" alt="Faculty image" />
           </div>
         </div>
       </section>
 
+      <!-- Research Interests -->
       <section id="research" class="panel">
         <div class="section-card">
-          <h3>Research Interests</h3>
-          <ul>
-            <li>Interdisciplinary Literary Theory</li>
-            <li>Comparative Literary Studies</li>
-            <li>Postmodernism</li>
-            <li>Poetics and Aesthetics</li>
-            <li>Quantum Approaches to Literature</li>
-            <li>Innovative Models of Literary Interpretation</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="publications" class="panel">
-        <div class="section-card">
-          <h3>Publications</h3>
-          <ul>
-            <li>
-              <strong>Essay (Self-published, 2025):</strong>
-              <em>Quantum Thinking and Literary Meaning</em> —
-              <a href="https://www.researchgate.net/publication/391722163_Quantum_Thinking_and_Literary_Meaning_A_New_Approach_to_Interdisciplinary_Literary_Theory" target="_blank" rel="noopener noreferrer">View on ResearchGate</a>
-            </li>
-            <li>
-              <strong>Poetry:</strong> Poetry video performances and spoken literary expression.
-            </li>
-            <li>
-              <strong>Educational & Literary Video Content:</strong> Public-facing content on literary thought, interpretation, and theory.
-            </li>
-          </ul>
-        </div>
-
-        <div class="section-card">
-          <div class="image-stack">
-            <img class="feature-image" src="poetry content.JPG" alt="Poetry content image" />
-            <img class="feature-image" src="poetry content 2.jpg" alt="Poetry content second image" />
-            <img class="feature-image" src="content 3.JPG" alt="Educational content image" />
+          <h3 data-i18n="research_heading">Research Interests</h3>
+          <div id="research_content">
+            <!-- Content rendered via JS -->
           </div>
         </div>
       </section>
 
+      <div id="publications_content">
+  <article class="pub-card" style="display: flex; gap: 1.25rem; align-items: flex-start;">
+    <!-- Book Cover Placeholder -->
+    <div class="pub-cover-wrapper" style="flex-shrink: 0; width: 110px;">
+      <a href="https://doi.org/10.5281/zenodo.22766183" target="_blank" rel="noopener noreferrer">
+        <img 
+          src="incidental-agency-cover.jpg" 
+          alt="Incidental Agency Book Cover by Adrian Morawdi" 
+          style="width: 100%; height: auto; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block; object-fit: cover;" 
+        />
+      </a>
+    </div>
+
+    <!-- Book Details -->
+    <div class="pub-details" style="flex-grow: 1;">
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+        <span style="font-size: 0.8rem; opacity: 0.7;">[Book]</span>
+        <span style="font-size: 0.8rem; opacity: 0.7;">2026</span>
+      </div>
+      <h4 style="margin: 0 0 0.4rem 0; font-size: 1.1rem;">Incidental Agency</h4>
+      <p style="font-size: 0.9rem; opacity: 0.85; margin: 0 0 0.75rem 0;">
+        Zenodo (CERN Repository)
+      </p>
+      <a href="https://doi.org/10.5281/zenodo.22766183" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-size: 0.88rem;">
+        View Publication (DOI: 10.5281/zenodo.22766183) &rarr;
+      </a>
+    </div>
+  </article>
+</div>
+
+      <!-- Academic Activities -->
       <section id="activities" class="panel">
         <div class="section-card">
-          <h3>Academic Activities</h3>
-          <ul>
-            <li>Organizer and host of literary discussion sessions and reading circles</li>
-            <li>Independent literature instruction and theoretical workshops</li>
-            <li>Educational content creation in literary theory and interpretation</li>
-            <li>International academic Q&amp;A support for literature and humanities learners</li>
-          </ul>
-        </div>
-
-        <div class="section-card">
+          <h3 data-i18n="act_heading">Academic Activities</h3>
+          <div id="activities_content">
+            <!-- Content rendered via JS -->
+          </div>
         </div>
       </section>
 
+      <!-- Teaching -->
       <section id="teaching" class="panel">
         <div class="section-card">
-          <h3>Teaching / Instruction</h3>
-          <ul>
-            <li>Literature discussion and guided reading sessions</li>
-            <li>Innovative approaches to literary interpretation</li>
-            <li>English language teaching for adults (B1–C2)</li>
-            <li>Independent educational support in literary studies</li>
-          </ul>
+          <h3 data-i18n="teach_heading">Teaching / Instruction</h3>
+          <div id="teaching_content">
+            <!-- Content rendered via JS -->
+          </div>
         </div>
-
         <div class="section-card">
           <div class="image-stack">
             <img class="feature-image" src="lit instruction 2.jpg" alt="Literature instruction image" />
@@ -586,11 +573,12 @@
         </div>
       </section>
 
+      <!-- Media and Social -->
       <section id="media" class="panel">
         <div class="section-card">
-          <h3>Media and Social</h3>
+          <h3 data-i18n="media_heading">Media and Social</h3>
 
-          <p><strong>Academic Profiles</strong></p>
+          <p><strong data-i18n="media_academic">Academic Profiles</strong></p>
           <div class="link-list">
             <a href="https://orcid.org/0009-0004-3554-5704" target="_blank" rel="noopener noreferrer">ORCID</a>
             <a href="https://scholar.google.com/citations?hl=en&user=3YQnB4IAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
@@ -598,8 +586,10 @@
             <a href="https://independent.academia.edu/AdrianMorawdi" target="_blank" rel="noopener noreferrer">Academia.edu</a>
           </div>
 
-          <p><strong>Media / Social</strong></p>
+          <p><strong data-i18n="media_social">Media / Social</strong></p>
           <div class="link-list">
+            <a href="https://x.com/Adrian_Morawdi" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+            <a href="https://www.imdb.com/name/nm18466709/" target="_blank" rel="noopener noreferrer">IMDb</a>
             <a href="https://www.youtube.com/@AdrianMorawdi" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a href="https://www.instagram.com/adrianmorawdi" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://t.me/Adrianmorawdi" target="_blank" rel="noopener noreferrer">Telegram</a>
@@ -609,27 +599,290 @@
         </div>
       </section>
 
+      <!-- Contact Info -->
       <section id="contact" class="panel">
         <div class="section-card">
-          <h3>Contact Info</h3>
+          <h3 data-i18n="contact_heading">Contact Info</h3>
           <p>
-            <strong>Academic Email:</strong>
+            <strong data-i18n="contact_academic">Academic Email:</strong>
             <a href="mailto:al.moradi@mail.um.ac.ir">al.moradi@mail.um.ac.ir</a>
           </p>
           <p>
-            <strong>Personal Email:</strong>
+            <strong data-i18n="contact_personal">Personal Email:</strong>
             <a href="mailto:adriennmoraw@gmail.com">adriennmoraw@gmail.com</a>
           </p>
         </div>
       </section>
 
       <footer>
-        © 2026 Adrian Morawdi. All rights reserved.
+        <span data-i18n="footer_text">© 2026 Adrian Morawdi. All rights reserved.</span>
       </footer>
     </main>
   </div>
 
   <script>
+    // --- Data Dictionary for EN, FA, FR ---
+    const i18nData = {
+      en: {
+        dir: "ltr",
+        brand_name: "Adrian Morawdi",
+        brand_title: "Literary Scholar | Author | Educator",
+        nav_about: "Profile / About",
+        nav_education: "Education",
+        nav_research: "Research Interests",
+        nav_publications: "Publications",
+        nav_activities: "Academic Activities",
+        nav_teaching: "Teaching / Instruction",
+        nav_media: "Media and Social",
+        nav_contact: "Contact Info",
+        hero_title: "Academic Website",
+        hero_desc: "Welcome to the official website of Adrian Morawdi.",
+        about_heading: "Profile / About",
+        about_html: `
+          <p class="meta-list">
+            <strong>Full Name:</strong> Alireza Moradi<br />
+            <strong>Pen Name:</strong> Adrian Morawdi<br />
+            <strong>Title / Role:</strong> Literary Scholar | Author | Educator<br />
+            <strong>Research Focus:</strong> Quantum Approaches to Literature, Interdisciplinary Literary Theory
+          </p>
+          <p>
+            Adrian Morawdi is the pen name of Alireza Moradi, an emerging interdisciplinary literary researcher and literature instructor based in Iran. His academic work centers on innovative approaches to literary interpretation, particularly where literary theory intersects with broader epistemological and interdisciplinary questions. His intellectual interests include comparative literary studies, postmodernism, poetics, aesthetics, and original theoretical inquiry into the relationship between literature and nontraditional conceptual frameworks.
+          </p>
+          <p>
+            Alongside research and teaching, he actively contributes to literary culture through educational content creation, poetry performance, reading circles, and academic discussion sessions.
+          </p>`,
+        edu_heading: "Education",
+        edu_html: `
+          <p>
+            <strong>Bachelor of Arts in English Language and Literature</strong><br />
+            Faculty of Letters and Humanities<br />
+            Ferdowsi University of Mashhad (FUM)<br />
+            October 2023 – Present
+          </p>
+          <p>
+            Current undergraduate studies are focused on literary criticism, English and comparative literature, theoretical humanities, and the foundations of interdisciplinary literary inquiry.
+          </p>`,
+        research_heading: "Research Interests",
+        research_html: `
+          <ul>
+            <li>Interdisciplinary Literary Theory</li>
+            <li>Comparative Literary Studies</li>
+            <li>Postmodernism</li>
+            <li>Poetics and Aesthetics</li>
+            <li>Quantum Approaches to Literature</li>
+            <li>Innovative Models of Literary Interpretation</li>
+          </ul>`,
+        pub_heading: "Publications",
+        pub_html: `
+          <ul>
+            <li>
+              <strong>Book:</strong>
+              <em>Interdisciplinary Perspectives in Literary Studies</em> —
+              <a href="https://doi.org/10.5281/zenodo.22766183" target="_blank" rel="noopener noreferrer">View on Zenodo (DOI: 10.5281/zenodo.22766183)</a>
+            </li>
+            <li>
+              <strong>Research Paper / Essay:</strong>
+              <em>Quantum Thinking and Literary Meaning: A New Approach to Interdisciplinary Literary Theory</em> —
+              <a href="https://doi.org/10.5281/zenodo.22863013" target="_blank" rel="noopener noreferrer">Zenodo (DOI)</a> |
+              <a href="https://www.researchgate.net/publication/391722163_Quantum_Thinking_and_Literary_Meaning_A_New_Approach_to_Interdisciplinary_Literary_Theory" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+            </li>
+            <li><strong>Poetry:</strong> Poetry video performances and spoken literary expression.</li>
+            <li><strong>Educational &amp; Literary Video Content:</strong> Public-facing content on literary thought, interpretation, and theory.</li>
+          </ul>`,
+        act_heading: "Academic Activities",
+        act_html: `
+          <ul>
+            <li>Organizer and host of literary discussion sessions and reading circles</li>
+            <li>Independent literature instruction and theoretical workshops</li>
+            <li>Educational content creation in literary theory and interpretation</li>
+            <li>International academic Q&amp;A support for literature and humanities learners</li>
+          </ul>`,
+        teach_heading: "Teaching / Instruction",
+        teach_html: `
+          <ul>
+            <li>Literature discussion and guided reading sessions</li>
+            <li>Innovative approaches to literary interpretation</li>
+            <li>English language teaching for adults (B1–C2)</li>
+            <li>Independent educational support in literary studies</li>
+          </ul>`,
+        media_heading: "Media and Social",
+        media_academic: "Academic Profiles",
+        media_social: "Media / Social",
+        contact_heading: "Contact Info",
+        contact_academic: "Academic Email:",
+        contact_personal: "Personal Email:",
+        footer_text: "© 2026 Adrian Morawdi. All rights reserved."
+      },
+
+      fa: {
+        dir: "rtl",
+        brand_name: "آدرین مرادی (علیرضا مرادی)",
+        brand_title: "پژوهشگر بین‌رشته‌ای نظریه ادبی",
+        nav_about: "درباره و بیوگرافی",
+        nav_education: "سوابق تحصیلی",
+        nav_research: "علایق پژوهشی",
+        nav_publications: "آثار و مقالات",
+        nav_activities: "فعالیت‌های آکادمیک",
+        nav_teaching: "تدریس و آموزش",
+        nav_media: "پروفایل‌ها و رسانه‌ها",
+        nav_contact: "اطلاعات تماس",
+        hero_title: "وب‌سایت آکادمیک",
+        hero_desc: "به وب‌سایت رسمی آدرین مرادی (علیرضا مرادی) خوش آمدید.",
+        about_heading: "درباره و معرفی",
+        about_html: `
+          <p class="meta-list">
+            <strong>نام و نام خانوادگی:</strong> علیرضا مرادی<br />
+            <strong>نام قلمی / آکادمیک:</strong> آدرین مرادی (Adrian Morawdi)<br />
+            <strong>نقش / عنوان:</strong> مدرس ادبیات، پژوهشگر مستقل نظریه ادبی، نویسنده و تولیدکننده محتوا<br />
+            <strong>تمرکز پژوهشی:</strong> رویکردهای کوانتومی به ادبیات، نظریه ادبی بین‌رشته‌ای
+          </p>
+          <p>
+            آدرین مرادی (علیرضا مرادی) پژوهشگر میان‌رشته‌ای در حوزه نظریه و نقد ادبی و مدرس ادبیات است. محور اصلی پژوهش‌های وی بر خوانش‌های نوین و تقاطع نظریه ادبی با ساختارهای معرفت‌شناختی و حوزه‌های بین‌رشته‌ای متمرکز است. از جمله علایق فکری و تحلیلی او می‌توان به ادبیات تطبیقی، پست‌مدرنیسم، بوطیقا، زیبایی‌شناسی و مدل‌سازی‌های نظری نوین در درک متن اشاره کرد.
+          </p>
+          <p>
+            وی علاوه بر پژوهش و تدریس، در زمینه خلق محتوای آموزشی تخصصی، اجرای پادکست و ویدیوهای تحلیلی ادبیات و برگزاری حلقه‌های متن‌خوانی فعالیت مستمر دارد.
+          </p>`,
+        edu_heading: "تحصیلات دانشگاهی",
+        edu_html: `
+          <p>
+            <strong>کارشناسی زبان و ادبیات انگلیسی</strong><br />
+            دانشکده ادبیات و علوم انسانی دکتر علی شریعتی<br />
+            دانشگاه فردوسی مشهد<br />
+            مهر ۱۴۰۲ – اکنون
+          </p>
+          <p>
+            تمرکز تحصیلی بر نقد ادبی، ادبیات جهان و تطبیقی، علوم انسانی نظری و پایه‌های پژوهش‌های بین‌رشته‌ای.
+          </p>`,
+        research_heading: "حوزه‌ها و علایق پژوهشی",
+        research_html: `
+          <ul>
+            <li>نظریه ادبی بین‌رشته‌ای (Interdisciplinary Literary Theory)</li>
+            <li>رویکردهای کوانتومی به ادبیات و معناشناسی (Quantum Approaches to Literature)</li>
+            <li>مطالعات ادبیات تطبیقی</li>
+            <li>پست‌مدرنیسم و زیبایی‌شناسی معاصر</li>
+            <li>بوطیقا و روش‌های نوین خوانش متن</li>
+          </ul>`,
+        pub_heading: "کتاب‌ها و مقالات علمی",
+        pub_html: `
+          <ul>
+            <li>
+              <strong>کتاب:</strong>
+              <em>Interdisciplinary Perspectives in Literary Studies</em> —
+              <a href="https://doi.org/10.5281/zenodo.22766183" target="_blank" rel="noopener noreferrer">مشاهده در Zenodo (شناسه DOI: 10.5281/zenodo.22766183)</a>
+            </li>
+            <li>
+              <strong>مقاله پژوهشی:</strong>
+              <em>Quantum Thinking and Literary Meaning: A New Approach to Interdisciplinary Literary Theory</em> —
+              <a href="https://doi.org/10.5281/zenodo.22863013" target="_blank" rel="noopener noreferrer">دریافت از Zenodo</a> |
+              <a href="https://www.researchgate.net/publication/391722163_Quantum_Thinking_and_Literary_Meaning_A_New_Approach_to_Interdisciplinary_Literary_Theory" target="_blank" rel="noopener noreferrer">مشاهده در ResearchGate</a>
+            </li>
+            <li><strong>شعر و اجرا:</strong> اجراهای ویدیویی شعر و خوانش‌های ادبی صوتی.</li>
+            <li><strong>تولید محتوای ویدئویی آموزشی:</strong> ویدیوهای تحلیلی پیرامون مفاهیم بنیادین نظریه ادبی و تفکر انتقادی.</li>
+          </ul>`,
+        act_heading: "فعالیت‌های علمی و اجرایی",
+        act_html: `
+          <ul>
+            <li>برگزاری جلسات گفت‌وگو و حلقه‌های کتاب‌خوانی و نقد ادبی</li>
+            <li>تدریس مستقل کارگاه‌های تئوری و نقد ادبی</li>
+            <li>تولید محتوای آموزشی تخصصی در حوزه ادبیات و هنر</li>
+            <li>پاسخگویی به پرسش‌های آکادمیک بین‌المللی دانشجویان علوم انسانی</li>
+          </ul>`,
+        teach_heading: "سوابق تدریس و آموزش",
+        teach_html: `
+          <ul>
+            <li>برگزاری جلسات هدایت‌شده تحلیل متن و ادبیات</li>
+            <li>آموزش رویکردهای نوآورانه در تحلیل متون ادبی</li>
+            <li>تدریس زبان انگلیسی پیشرفته بزرگسالان (سطوح B1 تا C2)</li>
+            <li>مشاوره و پشتیبانی آموزشی مستقل در مطالعات ادبی</li>
+          </ul>`,
+        media_heading: "پروفایل‌های علمی و شبکه‌های اجتماعی",
+        media_academic: "پروفایل‌های آکادمیک و بین‌المللی",
+        media_social: "رسانه‌ها و شبکه‌های اجتماعی",
+        contact_heading: "راه‌های ارتباطی",
+        contact_academic: "ایمیل آکادمیک (دانشگاهی):",
+        contact_personal: "ایمیل شخصی:",
+        footer_text: "© ۲۰۲۶ آدرین مرادی (علیرضا مرادی). تمامی حقوق محفوظ است."
+      },
+
+      fr: {
+        dir: "ltr",
+        brand_name: "Adrian Morawdi",
+        brand_title: "Chercheur Interdisciplinaire en Théorie Littéraire",
+        nav_about: "Profil / À propos",
+        nav_education: "Formation",
+        nav_research: "Intérêts de Recherche",
+        nav_publications: "Publications",
+        nav_activities: "Activités Académiques",
+        nav_teaching: "Enseignement",
+        nav_media: "Médias et Réseaux",
+        nav_contact: "Contact",
+        hero_title: "Site Académique Officiel",
+        hero_desc: "Bienvenue sur le site officiel d'Adrian Morawdi (Alireza Moradi).",
+        about_heading: "Profil / À propos",
+        about_html: `
+          <p class="meta-list">
+            <strong>Nom complet:</strong> Alireza Moradi<br />
+            <strong>Nom de plume:</strong> Adrian Morawdi<br />
+            <strong>Rôle:</strong> Chercheur en littérature, auteur et éducateur<br />
+            <strong>Axe de recherche:</strong> Approches quantiques de la littérature, théorie littéraire interdisciplinaire
+          </p>
+          <p>
+            Adrian Morawdi est le nom de plume d'Alireza Moradi, chercheur littéraire émergent et instructeur basé en Iran. Ses travaux portent sur les approches innovantes de l'interprétation des textes, au croisement de la théorie littéraire et des cadres épistémologiques contemporains. Ses recherches portent notamment sur la littérature comparée, le postmodernisme, la poétique et l'esthétique.
+          </p>`,
+        edu_heading: "Formation Universitaire",
+        edu_html: `
+          <p>
+            <strong>Licence en Langue et Littérature Anglaises</strong><br />
+            Faculté des Lettres et Sciences Humaines<br />
+            Université Ferdowsi de Machhad (FUM)<br />
+            Octobre 2023 – Présent
+          </p>`,
+        research_heading: "Intérêts de Recherche",
+        research_html: `
+          <ul>
+            <li>Théorie littéraire interdisciplinaire</li>
+            <li>Littérature comparée</li>
+            <li>Postmodernisme et esthétique</li>
+            <li>Approches quantiques appliquées à la littérature</li>
+          </ul>`,
+        pub_heading: "Publications",
+        pub_html: `
+          <ul>
+            <li>
+              <strong>Livre:</strong>
+              <em>Interdisciplinary Perspectives in Literary Studies</em> —
+              <a href="https://doi.org/10.5281/zenodo.22766183" target="_blank" rel="noopener noreferrer">Zenodo (DOI: 10.5281/zenodo.22766183)</a>
+            </li>
+            <li>
+              <strong>Article de recherche:</strong>
+              <em>Quantum Thinking and Literary Meaning: A New Approach to Interdisciplinary Literary Theory</em> —
+              <a href="https://doi.org/10.5281/zenodo.22863013" target="_blank" rel="noopener noreferrer">Zenodo (DOI)</a> |
+              <a href="https://www.researchgate.net/publication/391722163_Quantum_Thinking_and_Literary_Meaning_A_New_Approach_to_Interdisciplinary_Literary_Theory" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+            </li>
+          </ul>`,
+        act_heading: "Activités Académiques",
+        act_html: `
+          <ul>
+            <li>Organisation de cercles de lecture et d'ateliers de théorie littéraire</li>
+            <li>Création de contenu éducatif sur la pensée critique et littéraire</li>
+          </ul>`,
+        teach_heading: "Enseignement",
+        teach_html: `
+          <ul>
+            <li>Animation de sessions de lecture guidée et d'analyse de texte</li>
+            <li>Enseignement de l'anglais pour adultes (niveaux B1 à C2)</li>
+          </ul>`,
+        media_heading: "Profils Académiques et Réseaux",
+        media_academic: "Profils Académiques",
+        media_social: "Médias / Réseaux Sociaux",
+        contact_heading: "Contact",
+        contact_academic: "Courriel Académique:",
+        contact_personal: "Courriel Personnel:",
+        footer_text: "© 2026 Adrian Morawdi. Tous droits réservés."
+      }
+    };
+
+    // --- Tab Navigation Logic ---
     const buttons = document.querySelectorAll('.tab-btn');
     const panels = document.querySelectorAll('.panel');
 
@@ -664,6 +917,49 @@
         showPanel(button.dataset.target);
       });
     });
+
+    // --- Multi-Language Switching Logic ---
+    function setLanguage(lang) {
+      const data = i18nData[lang] || i18nData.en;
+
+      // Set Document Direction & Lang Attribute
+      document.body.setAttribute('dir', data.dir);
+      document.documentElement.setAttribute('lang', lang);
+
+      // Update Simple Text Nodes
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (data[key]) {
+          el.innerText = data[key];
+        }
+      });
+
+      // Update HTML Section Blocks
+      document.getElementById('about_content').innerHTML = data.about_html;
+      document.getElementById('education_content').innerHTML = data.edu_html;
+      document.getElementById('research_content').innerHTML = data.research_html;
+      document.getElementById('publications_content').innerHTML = data.pub_html;
+      document.getElementById('activities_content').innerHTML = data.act_html;
+      document.getElementById('teaching_content').innerHTML = data.teach_html;
+
+      // Update Active Button State
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.getAttribute('data-lang'));
+      });
+    });
+
+    // Initial render in English
+    setLanguage('en');
   </script>
 </body>
 </html>
